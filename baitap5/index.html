@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chi tiết Bài tập 5: Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung - Nguyễn Bảo Đăng">
+  <title>Chi tiết Bài tập 5 | Portfolio</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="../style.css">
+  
+  <style>
+    .detail-container {
+      max-width: 900px;
+      margin: 40px auto var(--section-padding);
+      padding: 0 24px;
+    }
+    
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-secondary);
+      font-weight: 500;
+      font-size: 0.95rem;
+      margin-bottom: 32px;
+      transition: all var(--transition-fast);
+    }
+    
+    .back-btn:hover {
+      color: var(--accent-primary);
+      transform: translateX(-4px);
+    }
+    
+    .detail-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: 48px;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 40px;
+    }
+    
+    .detail-header {
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 24px;
+    }
+    
+    .detail-badge {
+      margin-bottom: 12px;
+    }
+    
+    .detail-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+    
+    .detail-section {
+      margin-bottom: 32px;
+    }
+    
+    .detail-section h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .detail-section h3::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 16px;
+      background: var(--gradient-accent);
+      border-radius: 2px;
+    }
+    
+    .detail-text {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+    
+    .detail-objectives-list {
+      padding-left: 20px;
+      list-style: disc;
+      color: var(--text-secondary);
+    }
+    
+    .detail-objectives-list li {
+      margin-bottom: 8px;
+    }
+    
+    /* PDF Download Box */
+    .download-box {
+      background: var(--accent-glow);
+      border: 1px dashed var(--accent-primary);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 40px;
+    }
+    
+    .download-info h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+    
+    .download-info p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+    
+    /* Image Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    
+    .gallery-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-medium);
+      cursor: pointer;
+    }
+    
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-accent);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .gallery-img-wrapper {
+      position: relative;
+      padding-top: 60%;
+      background: var(--bg-secondary);
+      overflow: hidden;
+    }
+    
+    .gallery-img-wrapper img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    
+    .gallery-caption {
+      padding: 12px 16px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      border-top: 1px solid var(--border-color);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    /* Fullscreen Modal for Lightbox */
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 23, 42, 0.95);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+    
+    .lightbox.active {
+      display: flex;
+    }
+    
+    .lightbox-content {
+      max-width: 90%;
+      max-height: 80%;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: var(--bg-card);
+    }
+    
+    .lightbox-img {
+      display: block;
+      max-width: 100%;
+      max-height: 70vh;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+    
+    .lightbox-caption {
+      padding: 20px;
+      background: var(--bg-card);
+      color: var(--text-primary);
+      text-align: center;
+      font-weight: 600;
+      border-top: 1px solid var(--border-color);
+    }
+    
+    .lightbox-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: rgba(255,255,255,0.1);
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background var(--transition-fast);
+    }
+    
+    .lightbox-close:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    
+    @media (max-width: 768px) {
+      .detail-card {
+        padding: 32px 24px;
+      }
+      .download-box {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+      }
+      .detail-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background decorations -->
+  <div class="hero-glow hero-glow--1" style="top: -10%; left: 10%;"></div>
+  <div class="hero-glow hero-glow--2" style="top: 30%; right: 10%;"></div>
+
+  <div class="detail-container">
+    <a href="../index.html" class="back-btn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+      Quay lại trang chủ
+    </a>
+
+    <article class="detail-card">
+      <header class="detail-header">
+        <span class="detail-badge assignment-badge">Bài 5 - Mục 5.4</span>
+        <h1 class="detail-title">Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung</h1>
+      </header>
+
+      <section class="detail-section">
+        <h3>Giới thiệu</h3>
+        <p class="detail-text">Sử dụng kết hợp 3 công cụ AI tạo sinh (ChatGPT, DALL-E, Canva) để lên kịch bản và thiết kế bộ Slide thuyết trình cùng Infographic dọc chuyên nghiệp về chủ đề "Green AI - Trí tuệ nhân tạo xanh".</p>
+      </section>
+
+      <section class="detail-section">
+        <h3>Mục tiêu học tập</h3>
+        <ul class="detail-objectives-list">
+          <li>Làm quen với quy trình đồng sáng tạo nội dung số có sự hỗ trợ của các công cụ Generative AI.</li>
+          <li>Phân tích vai trò của AI, các thách thức đạo đức học thuật và cách làm chủ chất lượng đầu ra.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section">
+        <h3>Kết quả thực hiện</h3>
+        <p class="detail-text">Thiết kế thành công bộ ấn phẩm truyền thông chất lượng cao, kết hợp hài hòa giữa nguyên liệu thô từ AI (40%) và đóng góp sáng tạo cá nhân như vẽ biểu đồ dữ liệu thực tế và thiết kế lại layout (60%). Báo cáo chi tiết đính kèm 6 ảnh minh chứng.</p>
+      </section>
+
+      <section class="detail-section">
+        <h3>Hình ảnh minh chứng</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <div class="gallery-img-wrapper">
+              <img src="images/chatgpt_script.jpg" alt="Soạn thảo dàn ý kịch bản slide Green AI trên ChatGPT">
+            </div>
+            <div class="gallery-caption">Kịch bản slide (ChatGPT)</div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-img-wrapper">
+              <img src="images/gemini_script.jpg" alt="Phác thảo nội dung Infographic trên Gemini">
+            </div>
+            <div class="gallery-caption">Nội dung Infographic (Gemini)</div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-img-wrapper">
+              <img src="images/dalle_illustration.jpg" alt="Tạo hình ảnh minh họa bảo vệ môi trường bằng DALL-E 3">
+            </div>
+            <div class="gallery-caption">Ảnh minh họa (DALL-E 3)</div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-img-wrapper">
+              <img src="images/midjourney_grid.jpg" alt="Tạo phong cách thiết kế với Midjourney v6">
+            </div>
+            <div class="gallery-caption">Ý tưởng hình ảnh (Midjourney)</div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-img-wrapper">
+              <img src="images/canva_design.jpg" alt="Hoàn thiện thiết kế Slide thuyết trình trên Canva">
+            </div>
+            <div class="gallery-caption">Thiết kế Slide (Canva)</div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-img-wrapper">
+              <img src="images/canva_infographic.jpg" alt="Thiết kế ấn phẩm truyền thông Infographic trên Canva">
+            </div>
+            <div class="gallery-caption">Thiết kế Infographic (Canva)</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PDF Download Section -->
+      <section class="download-box">
+        <div class="download-info">
+          <h4>Báo cáo chi tiết (PDF)</h4>
+          <p>Tải xuống tài liệu báo cáo đầy đủ của bài tập này để xem chi tiết.</p>
+        </div>
+        <a href="./baitap5.pdf" class="btn btn-primary" target="_blank">
+          <span>Xem báo cáo PDF</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </section>
+    </article>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <div class="lightbox-content">
+      <img src="" alt="" class="lightbox-img" id="lightboxImg">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <script>
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose = document.getElementById('lightboxClose');
+    
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const img = item.querySelector('img');
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxCaption.textContent = img.alt;
+        lightbox.classList.add('active');
+      });
+    });
+    
+    lightboxClose.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+    });
+    
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

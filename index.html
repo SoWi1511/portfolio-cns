@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio cá nhân của một Kỹ sư phần mềm - Giới thiệu kỹ năng, dự án và hành trình phát triển chuyên môn.">
+  <title>Portfolio | Kỹ sư Phần mềm</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bold">baodang</span><span class="logo-dot">.</span><span class="logo-light">dev</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Trang chủ</a></li>
+        <li><a href="#about" class="nav-link">Giới thiệu</a></li>
+        <li><a href="#techstack" class="nav-link">Kỹ năng</a></li>
+        <li><a href="#assignments" class="nav-link">Bài tập</a></li>
+        <li><a href="#summary" class="nav-link">Tổng kết</a></li>
+        <li><a href="#contact" class="nav-link">Liên hệ</a></li>
+      </ul>
+      <!-- Mobile menu toggle -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="hero" class="hero-section">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow hero-glow--1"></div>
+    <div class="hero-glow hero-glow--2"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <!-- ✏️ THAY ĐỔI: Trạng thái hiện tại của bạn -->
+        Sẵn sàng cho cơ hội mới
+      </div>
+
+      <h1 class="hero-title">
+        Xin chào, tôi là<br>
+        <!-- ✏️ THAY ĐỔI: Tên của bạn -->
+        <span class="hero-name">Nguyễn Bảo Đăng</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        <!-- ✏️ THAY ĐỔI: Dòng định vị ngắn gọn -->
+        <span class="typing-text">Sinh viên CNTT định hướng Backend Developer đam mê học hỏi và lập trình hệ thống</span>
+      </p>
+
+      <div class="hero-cta">
+        <a href="#assignments" class="btn btn-primary" id="ctaViewProjects">
+          <span>Xem bài tập</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="#contact" class="btn btn-outline" id="ctaContact">
+          <span>Liên hệ</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Cuộn xuống</span>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT ME SECTION ==================== -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">01</span>
+        <h2 class="section-title">Giới thiệu</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image-wrapper">
+          <div class="about-image-frame">
+            <!-- ✏️ THAY ĐỔI: Ảnh đại diện của bạn (thay src) -->
+            <div class="about-image-placeholder" id="aboutImage">
+              <img src="images/avatar.jpg" alt="Nguyễn Bảo Đăng">
+            </div>
+            <div class="about-image-decoration"></div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <h3 class="about-heading">
+            <!-- ✏️ THAY ĐỔI: Tiêu đề giới thiệu -->
+            Một lập trình viên với đam mê tạo ra giá trị
+          </h3>
+
+          <div class="about-text">
+            <!-- ✏️ THAY ĐỔI: Giới thiệu bản thân (2-3 đoạn) -->
+            <p>
+              Tôi là sinh viên ngành <strong>Công nghệ thông tin</strong> tại <strong>Trường Đại học Công nghệ</strong>. 
+              Với niềm đam mê công nghệ từ nhỏ, tôi luôn khao khát học hỏi cách các hệ thống máy tính vận hành, 
+              đồng thời không ngừng tìm hiểu thông tin để xây dựng những giải pháp phần mềm tối ưu và có ý nghĩa cho cộng đồng.
+            </p>
+            <p>
+              Tôi tin rằng lập trình không chỉ là viết code, mà là nghệ thuật giải quyết vấn đề. Tư duy của tôi 
+              xoay quanh việc tạo ra các hệ thống <em>scalable</em>, <em>maintainable</em> và luôn hướng đến trải 
+              nghiệm tốt nhất cho người dùng cuối.
+            </p>
+            <p>
+              Mục tiêu của Portfolio này là thể hiện các kỹ năng số đã học, lưu trữ sản phẩm cá nhân để dễ dàng 
+              truy cập và chia sẻ, đồng thời phản ánh hành trình học tập và phát triển chuyên môn của tôi.
+            </p>
+          </div>
+
+          <div class="about-info-grid">
+            <div class="info-item">
+              <span class="info-label">Tên</span>
+              <!-- ✏️ THAY ĐỔI -->
+              <span class="info-value">Nguyễn Bảo Đăng</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Mã sinh viên</span>
+              <span class="info-value">25020115</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Ngành học</span>
+              <!-- ✏️ THAY ĐỔI -->
+              <span class="info-value">Công nghệ thông tin</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Trường</span>
+              <!-- ✏️ THAY ĐỔI -->
+              <span class="info-value">Trường Đại học Công nghệ</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Sở thích</span>
+              <!-- ✏️ THAY ĐỔI -->
+              <span class="info-value">Tìm hiểu thông tin</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TECH STACK SECTION ==================== -->
+  <section id="techstack" class="section techstack-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02</span>
+        <h2 class="section-title">Kỹ năng & Công nghệ</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <p class="section-description">
+        <!-- ✏️ THAY ĐỔI: Mô tả về tech stack -->
+        Các công nghệ và công cụ tôi đang tìm hiểu, học hỏi và áp dụng vào các dự án học tập.
+      </p>
+
+      <div class="tech-grid">
+        <!-- ✏️ THAY ĐỔI: Thêm/xóa/sửa các tech tag bên dưới -->
+
+        <!-- Ngôn ngữ lập trình -->
+        <div class="tech-category">
+          <h3 class="tech-category-title">Ngôn ngữ</h3>
+          <div class="tech-tags">
+            <div class="tech-tag" data-tooltip="Ngôn ngữ chính">
+              <span class="tech-icon">☕</span>
+              <span>Java</span>
+            </div>
+            <div class="tech-tag" data-tooltip="Scripting & AI">
+              <span class="tech-icon">🐍</span>
+              <span>Python</span>
+            </div>
+            <div class="tech-tag" data-tooltip="Web Frontend">
+              <span class="tech-icon">🌐</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="tech-tag" data-tooltip="Database">
+              <span class="tech-icon">🗃️</span>
+              <span>SQL</span>
+            </div>
+            <div class="tech-tag" data-tooltip="Markup">
+              <span class="tech-icon">📄</span>
+              <span>HTML/CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frameworks -->
+        <div class="tech-category">
+          <h3 class="tech-category-title">Frameworks & Thư viện</h3>
+          <div class="tech-tags">
+            <div class="tech-tag">
+              <span class="tech-icon">🍃</span>
+              <span>Spring Boot</span>
+            </div>
+            <div class="tech-tag">
+              <span class="tech-icon">📦</span>
+              <span>Maven</span>
+            </div>
+            <div class="tech-tag">
+              <span class="tech-icon">⚛️</span>
+              <span>React</span>
+            </div>
+            <div class="tech-tag">
+              <span class="tech-icon">🟢</span>
+              <span>Node.js</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="tech-category">
+          <h3 class="tech-category-title">Công cụ & Nền tảng</h3>
+          <div class="tech-tags">
+            <div class="tech-tag">
+              <span class="tech-icon">🐙</span>
+              <span>Git/GitHub</span>
+            </div>
+            <div class="tech-tag">
+              <span class="tech-icon">🐳</span>
+              <span>Docker</span>
+            </div>
+            <div class="tech-tag">
+              <span class="tech-icon">💻</span>
+              <span>VS Code</span>
+            </div>
+            <div class="tech-tag">
+              <span class="tech-icon">📋</span>
+              <span>Trello</span>
+            </div>
+            <div class="tech-tag">
+              <span class="tech-icon">🤖</span>
+              <span>ChatGPT</span>
+            </div>
+            <div class="tech-tag">
+              <span class="tech-icon">🎨</span>
+              <span>Figma</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kỹ năng số -->
+        <div class="tech-category">
+          <h3 class="tech-category-title">Kỹ năng số</h3>
+          <div class="tech-tags">
+            <div class="tech-tag">
+              <span class="tech-icon">🔍</span>
+              <span>Tìm kiếm nâng cao</span>
+            </div>
+            <div class="tech-tag">
+              <span class="tech-icon">✍️</span>
+              <span>Prompt Engineering</span>
+            </div>
+            <div class="tech-tag">
+              <span class="tech-icon">🤝</span>
+              <span>Hợp tác trực tuyến</span>
+            </div>
+            <div class="tech-tag">
+              <span class="tech-icon">🛡️</span>
+              <span>An toàn số</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ASSIGNMENTS SECTION (Bài tập môn học) ==================== -->
+  <section id="assignments" class="section assignments-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03</span>
+        <h2 class="section-title">Bài tập Kỹ năng số</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <p class="section-description">
+        Tập hợp các bài tập đã hoàn thành trong môn "Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo", 
+        thể hiện quá trình rèn luyện từng kỹ năng cụ thể.
+      </p>
+
+      <div class="assignments-timeline">
+
+        <!-- ✏️ BÀI TẬP 1: Quản lý tệp và thư mục -->
+        <div class="assignment-card" id="assignment1">
+          <div class="assignment-number">01</div>
+          <div class="assignment-content">
+            <div class="assignment-header">
+              <span class="assignment-badge">Bài 1 - Mục 1.4</span>
+              <h3 class="assignment-title">Thao tác cơ bản với tệp tin và thư mục</h3>
+            </div>
+            <div class="assignment-body">
+              <p class="assignment-desc">
+                Thiết lập cấu trúc thư mục phân cấp khoa học và thực hiện thành thạo các thao tác cơ bản trên Windows 11 bao gồm tạo lập, đổi tên, sao chép, di chuyển, xóa vĩnh viễn và khôi phục tệp tin.
+              </p>
+              <div class="assignment-details">
+                <div class="assignment-objectives">
+                  <h4>Mục tiêu:</h4>
+                  <ul>
+                    <li>Làm quen với File Explorer và cách tổ chức thư mục phân cấp khoa học.</li>
+                    <li>Sử dụng thành thạo phím tắt (Ctrl+C, Ctrl+X, Ctrl+V, Shift+Delete, F2) và hiểu rõ bản chất của các lệnh này.</li>
+                  </ul>
+                </div>
+                <div class="assignment-result">
+                  <h4>Kết quả:</h4>
+                  <p>Hoàn thành 100% các yêu cầu thực hành cá nhân. Xây dựng tài liệu báo cáo học thuật chuẩn hóa chuyên nghiệp, đính kèm 12 hình ảnh minh họa chất lượng cao chụp lại từng bước thực hiện trên Windows 11.</p>
+                </div>
+              </div>
+              <div class="assignment-actions" style="margin-top: 24px; display: flex; justify-content: flex-end;">
+                <a href="baitap1/index.html" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">
+                  <span>Xem chi tiết & Tải PDF</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; display: inline-block; vertical-align: middle;">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ✏️ BÀI TẬP 2: Tìm kiếm và đánh giá thông tin -->
+        <div class="assignment-card" id="assignment2">
+          <div class="assignment-number">02</div>
+          <div class="assignment-content">
+            <div class="assignment-header">
+              <span class="assignment-badge">Bài 2 - Mục 2.4</span>
+              <h3 class="assignment-title">Tìm kiếm và đánh giá thông tin học thuật</h3>
+            </div>
+            <div class="assignment-body">
+              <p class="assignment-desc">
+                Thực hiện tìm kiếm học thuật nâng cao trên các cơ sở dữ liệu lớn (Google Scholar, IEEE Xplore, PMC) và lập bảng đánh giá độ tin cậy của 10 tài liệu về chủ đề "Ứng dụng AI và ML trong Tự động hóa quy trình".
+              </p>
+              <div class="assignment-details">
+                <div class="assignment-objectives">
+                  <h4>Mục tiêu:</h4>
+                  <ul>
+                    <li>Sử dụng các toán tử logic và cụm từ khóa chính xác để tìm kiếm thông tin học thuật hiệu quả.</li>
+                    <li>Đánh giá độ tin cậy của tài liệu khoa học dựa trên nhà xuất bản, tác giả, phương pháp nghiên cứu và tính cập nhật.</li>
+                  </ul>
+                </div>
+                <div class="assignment-result">
+                  <h4>Kết quả:</h4>
+                  <p>Lập bảng phân tích và đánh giá 10 tài liệu khoa học uy tín, chỉ ra xu hướng dịch chuyển công nghệ tự động hóa quy trình từ rule-based truyền thống (2020) sang AI tạo sinh (2025). Hoàn thành báo cáo học thuật chuyên nghiệp.</p>
+                </div>
+              </div>
+              <div class="assignment-actions" style="margin-top: 24px; display: flex; justify-content: flex-end;">
+                <a href="baitap2/index.html" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">
+                  <span>Xem chi tiết & Tải PDF</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; display: inline-block; vertical-align: middle;">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ✏️ BÀI TẬP 3: Viết Prompt hiệu quả -->
+        <div class="assignment-card" id="assignment3">
+          <div class="assignment-number">03</div>
+          <div class="assignment-content">
+            <div class="assignment-header">
+              <span class="assignment-badge">Bài 3 - Mục 3.4</span>
+              <h3 class="assignment-title">Viết Prompt hiệu quả cho các tác vụ học tập</h3>
+            </div>
+            <div class="assignment-body">
+              <p class="assignment-desc">
+                Thiết kế, thử nghiệm và phân tích 3 phiên bản prompt (Cơ bản, Cải tiến, Nâng cao) áp dụng cho 3 tác vụ học tập cốt lõi: Tóm tắt bài đọc chuyên ngành, Giải thích khái niệm phức tạp (RSA) và Tạo bộ câu hỏi trắc nghiệm (Java OOP).
+              </p>
+              <div class="assignment-details">
+                <div class="assignment-objectives">
+                  <h4>Mục tiêu:</h4>
+                  <ul>
+                    <li>Làm chủ các kỹ thuật kỹ nghệ câu lệnh (Prompt Engineering) nâng cao như Role Prompting, Chain-of-Thought, và Few-Shot.</li>
+                    <li>Phân tích mối quan hệ giữa cấu trúc câu lệnh và chất lượng câu trả lời của mô hình ngôn ngữ lớn (LLM).</li>
+                  </ul>
+                </div>
+                <div class="assignment-result">
+                  <h4>Kết quả:</h4>
+                  <p>Xây dựng thành công 9 prompt thử nghiệm trực tiếp trên ChatGPT, rút ra nguyên tắc vàng viết prompt C-L-E-A-R. Hoàn thành xuất sắc báo cáo học thuật chi tiết đính kèm minh chứng hình ảnh thực tế.</p>
+                </div>
+              </div>
+              <div class="assignment-actions" style="margin-top: 24px; display: flex; justify-content: flex-end;">
+                <a href="baitap3/index.html" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">
+                  <span>Xem chi tiết & Tải PDF</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; display: inline-block; vertical-align: middle;">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ✏️ BÀI TẬP 4: Hợp tác trực tuyến -->
+        <div class="assignment-card" id="assignment4">
+          <div class="assignment-number">04</div>
+          <div class="assignment-content">
+            <div class="assignment-header">
+              <span class="assignment-badge">Bài 4 - Mục 4.4</span>
+              <h3 class="assignment-title">Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm</h3>
+            </div>
+            <div class="assignment-body">
+              <p class="assignment-desc">
+                Thiết lập và sử dụng đồng thời 4 công cụ cộng tác trực tuyến phổ biến (Trello, Slack, Google Docs, Google Drive) để điều phối từ xa dự án nhóm thiết kế và xây dựng Website.
+              </p>
+              <div class="assignment-details">
+                <div class="assignment-objectives">
+                  <h4>Mục tiêu:</h4>
+                  <ul>
+                    <li>Thành thạo kỹ năng thiết lập, tối ưu hóa không gian làm việc số và quản lý tiến độ cá nhân/nhóm.</li>
+                    <li>Tổ chức lưu trữ tài nguyên phân cấp khoa học và thiết lập cơ chế phân quyền truy cập bảo mật.</li>
+                  </ul>
+                </div>
+                <div class="assignment-result">
+                  <h4>Kết quả:</h4>
+                  <p>Phối hợp hoàn thành dự án đúng tiến độ. Thực hiện hơn 10 lượt hỗ trợ kỹ thuật trên Slack và 23 lượt chỉnh sửa tài liệu trên Google Docs. Biên soạn báo cáo phân tích sâu 3 thách thức và 3 giải pháp kèm 9 ảnh minh chứng thực tế.</p>
+                </div>
+              </div>
+              <div class="assignment-actions" style="margin-top: 24px; display: flex; justify-content: flex-end;">
+                <a href="baitap4/index.html" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">
+                  <span>Xem chi tiết & Tải PDF</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; display: inline-block; vertical-align: middle;">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ✏️ BÀI TẬP 5: Sáng tạo nội dung với AI -->
+        <div class="assignment-card" id="assignment5">
+          <div class="assignment-number">05</div>
+          <div class="assignment-content">
+            <div class="assignment-header">
+              <span class="assignment-badge">Bài 5 - Mục 5.4</span>
+              <h3 class="assignment-title">Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung</h3>
+            </div>
+            <div class="assignment-body">
+              <p class="assignment-desc">
+                Sử dụng kết hợp 3 công cụ AI tạo sinh (ChatGPT, DALL-E, Canva) để lên kịch bản và thiết kế bộ Slide thuyết trình cùng Infographic dọc chuyên nghiệp về chủ đề "Green AI - Trí tuệ nhân tạo xanh".
+              </p>
+              <div class="assignment-details">
+                <div class="assignment-objectives">
+                  <h4>Mục tiêu:</h4>
+                  <ul>
+                    <li>Làm quen với quy trình đồng sáng tạo nội dung số có sự hỗ trợ của các công cụ Generative AI.</li>
+                    <li>Phân tích vai trò của AI, các thách thức đạo đức học thuật và cách làm chủ chất lượng đầu ra.</li>
+                  </ul>
+                </div>
+                <div class="assignment-result">
+                  <h4>Kết quả:</h4>
+                  <p>Thiết kế thành công bộ ấn phẩm truyền thông chất lượng cao, kết hợp hài hòa giữa nguyên liệu thô từ AI (40%) và đóng góp sáng tạo cá nhân như vẽ biểu đồ dữ liệu thực tế và thiết kế lại layout (60%). Báo cáo chi tiết đính kèm 6 ảnh minh chứng.</p>
+                </div>
+              </div>
+              <div class="assignment-actions" style="margin-top: 24px; display: flex; justify-content: flex-end;">
+                <a href="baitap5/index.html" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">
+                  <span>Xem chi tiết & Tải PDF</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; display: inline-block; vertical-align: middle;">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ✏️ BÀI TẬP 6: AI có trách nhiệm -->
+        <div class="assignment-card" id="assignment6">
+          <div class="assignment-number">06</div>
+          <div class="assignment-content">
+            <div class="assignment-header">
+              <span class="assignment-badge">Bài 6 - Mục 6.4</span>
+              <h3 class="assignment-title">Sử dụng AI có trách nhiệm trong học tập và nghiên cứu</h3>
+            </div>
+            <div class="assignment-body">
+              <p class="assignment-desc">
+                Nghiên cứu chính sách học thuật của VNU/UET và xây dựng bộ 6 nguyên tắc cá nhân sử dụng AI có trách nhiệm. Thực hành kiểm thử đoạn mã nguồn Java Singleton Pattern với sự hỗ trợ của ChatGPT/Gemini, thực chứng trích dẫn minh bạch.
+              </p>
+              <div class="assignment-details">
+                <div class="assignment-objectives">
+                  <h4>Mục tiêu:</h4>
+                  <ul>
+                    <li>Hiểu rõ ranh giới giữa hỗ trợ học tập hợp lệ và gian lận học thuật, các vấn đề sở hữu trí tuệ trong kỷ nguyên AI.</li>
+                    <li>Xây dựng và thực hành hệ thống nguyên tắc cá nhân giúp tối ưu hiệu năng của AI mà không làm suy giảm tư duy phản biện.</li>
+                  </ul>
+                </div>
+                <div class="assignment-result">
+                  <h4>Kết quả:</h4>
+                  <p>Hoàn thành xuất sắc báo cáo học thuật chuẩn hóa chuyên nghiệp, đính kèm Infographic dọc tự thiết kế về 6 nguyên tắc sử dụng AI có trách nhiệm và 3 ảnh thực chứng sử dụng công cụ thực tế.</p>
+                </div>
+              </div>
+              <div class="assignment-actions" style="margin-top: 24px; display: flex; justify-content: flex-end;">
+                <a href="baitap6/index.html" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">
+                  <span>Xem chi tiết & Tải PDF</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; display: inline-block; vertical-align: middle;">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SUMMARY SECTION (Tổng kết) ==================== -->
+  <section id="summary" class="section summary-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04</span>
+        <h2 class="section-title">Tổng kết & Đánh giá</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="summary-grid">
+        <div class="summary-card summary-card--experience">
+          <div class="summary-icon">💡</div>
+          <h3>Trải nghiệm & Cảm nhận</h3>
+          <!-- ✏️ THAY ĐỔI: Chia sẻ trải nghiệm -->
+          <p>
+            Hành trình hoàn thành chuỗi 6 bài tập Kỹ năng số là một trải nghiệm học tập thực tế và giá trị đối với tôi. Qua từng bài tập, tôi không chỉ tích lũy thêm các kiến thức công nghệ số hiện đại mà còn hình thành tư duy làm việc khoa học, từ cách sắp xếp tệp tin có hệ thống cho đến việc tự lập trình trang Portfolio này để ghi lại dấu ấn phát triển của bản thân.
+          </p>
+        </div>
+
+        <div class="summary-card summary-card--skills">
+          <div class="summary-icon">🎯</div>
+          <h3>Kiến thức & Kỹ năng đạt được</h3>
+          <!-- ✏️ THAY ĐỔI: Liệt kê kiến thức -->
+          <ul>
+            <li><strong>Quản lý & Hợp tác số</strong>: Tổ chức hệ thống tệp tin phân cấp khoa học và sử dụng phối hợp Slack, Trello, Google Docs để quản lý tiến độ và vận hành dự án nhóm hiệu quả.</li>
+            <li><strong>Khai thác thông tin & Học thuật</strong>: Tìm kiếm thông tin khoa học nâng cao và đánh giá độ tin cậy nguồn tin học thuật trên các cơ sở dữ liệu khoa học uy tín.</li>
+            <li><strong>Kỹ nghệ câu lệnh & Sáng tạo AI</strong>: Làm chủ kỹ năng viết prompt CLEAR (Few-shot, CoT) và phối hợp các công cụ AI tạo sinh (ChatGPT, DALL-E, Canva) để lên kịch bản, thiết kế ấn phẩm truyền thông.</li>
+            <li><strong>Soạn thảo báo cáo học thuật</strong>: Thành thạo việc thiết kế trang bìa và soạn thảo văn bản khoa học, bảng biểu chuẩn hóa chuyên nghiệp thay vì các bộ công cụ Office thông thường.</li>
+          </ul>
+        </div>
+
+        <div class="summary-card summary-card--highlights">
+          <div class="summary-icon">⭐</div>
+          <h3>Điểm tâm đắc nhất</h3>
+          <!-- ✏️ THAY ĐỔI -->
+          <p>
+            Điều tôi tâm đắc nhất là bài học về <strong>Sử dụng AI có trách nhiệm</strong>. Qua việc thực hành phân tích và kiểm thử mã nguồn Java Singleton Pattern với ChatGPT, tôi đã rút ra được ranh giới rõ ràng giữa việc mượn lực AI để tăng hiệu suất học tập và việc lạm dụng dẫn đến ỷ lại. Luôn luôn kiểm chứng chéo thông tin và ghi nhận nguồn rõ ràng là kim chỉ nam của tôi.
+          </p>
+        </div>
+
+        <div class="summary-card summary-card--challenges">
+          <div class="summary-icon">🔥</div>
+          <h3>Thách thức & Bài học</h3>
+          <!-- ✏️ THAY ĐỔI -->
+          <p>
+            Thách thức lớn nhất của tôi là việc định dạng báo cáo khoa học và xử lý dung lượng lớn khi đính kèm nhiều hình ảnh minh chứng. Bằng cách chia nhỏ vấn đề, áp dụng kỹ năng tìm kiếm học thuật nâng cao đã học ở Bài 2 để tra cứu giải pháp, tôi đã tối ưu hóa hình ảnh và hoàn thành toàn bộ báo cáo một cách trọn vẹn.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT SECTION ==================== -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">05</span>
+        <h2 class="section-title">Liên hệ</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <p class="section-description">
+        Bạn muốn kết nối hoặc có cơ hội hợp tác? Hãy liên hệ với tôi!
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div>
+              <span class="contact-label">Email</span>
+              <!-- ✏️ THAY ĐỔI -->
+              <a href="mailto:25020115@vnu.edu.vn" class="contact-value">25020115@vnu.edu.vn</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div>
+              <span class="contact-label">Địa điểm</span>
+              <!-- ✏️ THAY ĐỔI -->
+              <span class="contact-value">Hà Nội, Việt Nam</span>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="social-links">
+            <!-- ✏️ THAY ĐỔI: Link GitHub -->
+            <a href="https://github.com" class="social-link" id="socialGithub" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+            <!-- ✏️ THAY ĐỔI: Link LinkedIn -->
+            <a href="https://linkedin.com" class="social-link" id="socialLinkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <!-- ✏️ THAY ĐỔI: Link Facebook -->
+            <a href="https://facebook.com" class="social-link" id="socialFacebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="formName">Họ và tên</label>
+            <input type="text" id="formName" name="name" placeholder="Nhập họ và tên" required>
+          </div>
+          <div class="form-group">
+            <label for="formEmail">Email</label>
+            <input type="email" id="formEmail" name="email" placeholder="Nhập email" required>
+          </div>
+          <div class="form-group">
+            <label for="formMessage">Tin nhắn</label>
+            <textarea id="formMessage" name="message" rows="5" placeholder="Nhập nội dung tin nhắn..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="formSubmit">
+            <span>Gửi tin nhắn</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-text">
+          <!-- ✏️ THAY ĐỔI: Tên của bạn -->
+          © 2026 <strong>Nguyễn Bảo Đăng</strong>. Thiết kế & Phát triển với ❤️
+        </p>
+        <p class="footer-sub">
+          Portfolio Kỹ thuật số — Nhập môn Công nghệ số & Ứng dụng Trí tuệ nhân tạo
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
